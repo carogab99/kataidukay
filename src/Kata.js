@@ -8,6 +8,21 @@ class Kata extends Component {
     this.state = {};
   }
 
+  generateArray(filas, columnas){
+    let printerArray = [];
+    let cont = 1;
+
+    for(let fila=0; fila < filas; fila++){
+      const initArray= []
+      for(let colum=0; colum < columnas; colum++){
+        initArray.push(cont);
+        cont++;
+      }
+      printerArray.push(initArray);
+    }
+    this.setState({printerArray: printerArray})
+  }
+
   render() {
     return (
       <div className="Kata">
